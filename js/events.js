@@ -3,10 +3,12 @@ var log = function() {
 };
 
 // click
-$('input[type=button]').bind('click', log);
+$('input[type=button]').one('click', log);
 
-$('input[type=button]').trigger('click');
+// $('input[type=button]').trigger('click');
 
 
 // unbind
 $('input[type=button]').unbind('click', log);
+
+$('input[type=button]').trigger('click');
