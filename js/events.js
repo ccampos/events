@@ -1,14 +1,5 @@
-var log = function() {
-	console.log('loglog');
-};
+$('body').bind('click', function(ev, evData) {
+	console.log('bind', arguments, this);
+});
 
-// click
-$('input[type=button]').one('click', log);
-
-// $('input[type=button]').trigger('click');
-
-
-// unbind
-$('input[type=button]').unbind('click', log);
-
-$('input[type=button]').trigger('click');
+$('body').trigger('click', {id: 0});
